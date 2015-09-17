@@ -51,15 +51,23 @@ int main () {
             //-------------------
 
             split(line, ' ', v);
+            //Pula linha em branco
             if(v.size()!=0){
                 int complement = 0;
-                if(v[v.size()-1]=="JUNIOR" || v[v.size()-1]=="JÚNIOR" || v[v.size()-1]=="NETTO" || v[v.size()-1]=="NETO" || v[v.size()-1]=="FILHO"){
+                /*Esta variável é utilizada caso o nome da pessoa possua algum dos sobrenomes abaixo
+                 que no caso irá modificar a forma a ser tratado, exemplo:
+                 GILCEMIR ANGELO DA CONCEIÇÃO -> CONCEIÇÃO, G.A. da, [número]
+                 já 
+                 GILCEMIR ANGELO DA CONCEIÇÃO FILHO -> CONCEIÇÃO FILHO, G.A., [número]
+                */
+                 if(v[v.size()-1]=="JUNIOR" || v[v.size()-1]=="JÚNIOR" || v[v.size()-1]=="NETTO" || v[v.size()-1]=="NETO" || v[v.size()-1]=="FILHO"){
                     cout<<v[v.size()-2]<<" "<<v[v.size()-1]<<", ";
                     complement = 1;
                 }else{
                     cout<<v[v.size()-1]<<", ";
                 }
                 for (int i = 0; i < v.size()-1-complement; ++i) {
+                    //Aqui, tais partes de sobrenome NÃO são abreviados - por isso o teste.
                     if(v[i]=="DE" || v[i]=="DO" || v[i]=="DA" || v[i]=="E" || v[i]=="DOS" || v[i]=="DAS"){
                         cout<<" "<< v[i];
                             if(i != v.size()-2-complement)
