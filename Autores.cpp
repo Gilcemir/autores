@@ -27,6 +27,10 @@ int main () {
     string line;
     string number_article;
     ifstream myfile ("autores.txt"); // ifstream = padrão ios:in
+    ofstream myOutputFile;
+    //Abrindo arquivo para cópia
+    myOutputFile.open("output.txt");
+
     if (myfile.is_open())
     {
         while (! myfile.eof() ) //enquanto end of file for false continua
@@ -38,11 +42,6 @@ int main () {
             if(line.length()==3){
                 number_article = line;
             }
-            //cout<<"Numero do artigo = " << number_article << endl; 
-            // }else {
-            //     cout << line <<" "<< number_article<<endl;
-
-            // }
 
             //Declaracoes -------
             vector<string> v;
@@ -62,25 +61,32 @@ int main () {
                 */
                  if(v[v.size()-1]=="JUNIOR" || v[v.size()-1]=="JÚNIOR" || v[v.size()-1]=="NETTO" || v[v.size()-1]=="NETO" || v[v.size()-1]=="FILHO"){
                     cout<<v[v.size()-2]<<" "<<v[v.size()-1]<<", ";
+                    myOutputFile<<v[v.size()-2]<<" "<<v[v.size()-1]<<", ";
                     complement = 1;
                 }else{
                     cout<<v[v.size()-1]<<", ";
+                    myOutputFile<<v[v.size()-1]<<", ";
                 }
                 for (int i = 0; i < v.size()-1-complement; ++i) {
                     //Aqui, tais partes de sobrenome NÃO são abreviados - por isso o teste.
                     if(v[i]=="DE" || v[i]=="DO" || v[i]=="DA" || v[i]=="E" || v[i]=="DOS" || v[i]=="DAS"){
                         cout<<" "<< v[i];
+                        myOutputFile<<" "<< v[i];
                             if(i != v.size()-2-complement)
                                 cout<<" ";
+                                myOutputFile<<" ";
                     }else{
                         cout << v[i][0] << ".";
+                        myOutputFile << v[i][0] << ".";
                     }
                 }
                 cout<<", "<<number_article<<endl;
+                myOutputFile<<", "<<number_article<<endl;
             }
 
     }
     myfile.close();
+    myOutputFile.close();
 }
 
 else cout << "Unable to open file"; 
