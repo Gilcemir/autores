@@ -1,7 +1,6 @@
 --- COMO USAR O PROGRAMA ---
 
-Este programa foi feito para otimizar o processo de  criação de índice por autores. Para isto, obviamente, faz-se necessário alguns
-dados - no caso, nome do autor(EM CAIXA ALTA) e número de paginação do artigo.
+Este programa foi feito para otimizar o processo de  criação de índice por autores. Para isto, obviamente, faz-se necessário alguns dados - no caso, nome do autor(EM CAIXA ALTA) e número de paginação do artigo.
 
 Exemplo: FULANO DE TAL SOARES; MARIO DA SILVA SOUZA;  JOSÉ MÁRIO FERREIRA - ARTIGO 011.
 
@@ -41,10 +40,9 @@ SANTOS, M.F. dos, 117
 CONSIDERAÇÕES:
 
 - O nome do arquivo para leitura deverá ser "autores.txt";
-- Não será ordenado, posto que o arquivo gerado será usado simplesmente para cópia, e as ferramentas para criar o sumário completo
-(WORD, por exemplo) já tem suas ferramentas de ordenação.
+- Não será ordenado, posto que o arquivo gerado será usado simplesmente para cópia, e as ferramentas para criar o sumário completo (WORD, por exemplo) já tem suas ferramentas de ordenação.
 
-No mais, para quaisquer dúvidas, entrar em contato através do email gangelofilho@gmail.com
+No mais, para quaisquer dúvidas, entrar em contato através do email gangelofilho@gmail.com.
 
 Att,
 Gilcemir Angelo da Conceição Filho.
