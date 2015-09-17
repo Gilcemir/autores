@@ -37,10 +37,14 @@ FERREIRA JUNIOR, O., 117
 SILVA, A.C. E, 117
 SANTOS, M.F. dos, 117
 
+A exemplo, tem-se um documento-exemplo de nome "autores.txt".
+
 CONSIDERAÇÕES:
 
 - O nome do arquivo para leitura deverá ser "autores.txt";
-- Não será ordenado, posto que o arquivo gerado será usado simplesmente para cópia, e as ferramentas para criar o sumário completo (WORD, por exemplo) já tem suas ferramentas de ordenação.
+- Não será ordenado, posto que o arquivo gerado será usado simplesmente para cópia, e as ferramentas para criar o sumário completo (WORD, por exemplo) já tem suas ferramentas de ordenação;
+- O nome do arquivo de SAÍDA é "output.txt".
+
 
 No mais, para quaisquer dúvidas, entrar em contato através do email gangelofilho@gmail.com.
 
